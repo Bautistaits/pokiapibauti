@@ -2,13 +2,14 @@
 let titulo = document.querySelector("#titulo")   // <h1 id="titulo">
 let imagen = document.querySelector("#imagen")   // <img id="imagen">
 let boton = document.querySelector("#boton")     // <button id="boton">
-
+let pokeNum = 0
 // 2) Cuando el usuario hace clic en el botón, se ejecuta esta función
 boton.onclick = function () {
 
     // 3) fetch() hace una solicitud HTTP (GET por defecto) a la URL dada.
     // Devuelve una *Promesa* que se resuelve con un objeto Response
     // cuando el servidor contesta.
+    pokeNum++
     fetch("https://pokeapi.co/api/v2/pokemon-form/157/")
 
     // 4) Primer .then()
